@@ -1,6 +1,7 @@
 package com.jw.jwwanandroid.model.api
 
 import com.jw.jwwanandroid.model.bean.ArticleList
+import com.jw.jwwanandroid.model.bean.BaseResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -17,7 +18,6 @@ interface ApiService {
     }
 
     @GET("/article/list/{page}/json")
-    fun getHomeArticleList(@Path("page") page: Int): Call<ArticleList>
-
+    fun getHomeArticleList(@Path("page") page: Int): BaseResponse<ArticleList>
 
 }
